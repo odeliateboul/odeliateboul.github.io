@@ -1,0 +1,34 @@
+/* ==========================================================================
+   STAR LIST
+   --------------------------------------------------------------------------
+   Opt-in list style used for the Science Writing entries: a star marker
+   instead of a number or a bullet. Wrap the markdown list in
+
+     <div class="star-list" markdown="1">
+     - entry
+     </div>
+
+   `list-style-type: "*"` is not used because Safari only supports string
+   markers from 17; a ::before marker works everywhere.
+   ========================================================================== */
+
+.star-list ul {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 1.5em;
+
+  li {
+    position: relative;
+    margin-bottom: 0.75em;
+
+    &::before {
+      content: "\2605"; /* black star */
+      position: absolute;
+      left: -1.5em;
+      top: 0;
+      color: $bg-ink;
+      font-size: 0.8em;
+      line-height: 1.8;
+    }
+  }
+}

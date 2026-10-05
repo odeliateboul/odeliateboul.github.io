@@ -1,0 +1,241 @@
+/* ==========================================================================
+   SITE BACKGROUND IMAGE
+   --------------------------------------------------------------------------
+   Lucien Levy-Dhurmer, "La Calanque" (pastel).
+
+   The painting is drawn on a fixed, viewport-sized layer behind the page,
+   and the content columns get a translucent panel on top of it so that body
+   text keeps its contrast.
+
+   Two things here are deliberate and easy to break:
+     - The background layer is sized to the VIEWPORT (position: fixed), not
+       put on <body>. A `cover` background on <body> is sized to the whole
+       document, which zooms the painting enormously on a long page.
+     - The layer uses z-index 0 and the content is lifted to z-index 1. A
+       negative z-index on the layer paints it OVER this theme's floated
+       content instead of under it.
+
+   To taste:
+     $bg-wash   - how much the painting is toned down (higher = paler)
+     $bg-panel  - opacity of the panel behind the text (lower = more painting)
+   ========================================================================== */
+
+$bg-image : "/images/calanque-levy-dhurmer2.jpg";
+$bg-wash  : 0.35;
+
+/* Ink colour for body text, headings and the masthead. */
+$bg-ink   : #0F056B;
+
+/* Link colour. The darkest blue that still reads as a different colour from
+   $bg-ink while clearing 4.5:1 over the pale areas of the background
+   painting. Links are also underlined, so they stay identifiable where the
+   painting is busiest and for colour-blind readers. */
+$bg-link       : #1565A0;
+$bg-link-hover : #0E4570;
+
+/* Opacity of the panel behind the text. Exposed as a custom property so it
+   can be changed in one place (and previewed live in devtools). Lower =
+   more of the painting shows through, at the cost of text contrast. */
+:root {
+  --bg-panel: 0.0;
+}
+
+body {
+  background-color: transparent;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, $bg-wash),
+      rgba(255, 255, 255, $bg-wash)
+    ),
+    url("#{$bg-image}");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  pointer-events: none;
+}
+
+/* Lift the actual page above the background layer.
+
+   NOTE: .masthead is deliberately NOT in this list. The base theme gives it
+   `position: fixed` and `z-index: 20`, so it already paints above the
+   background layer. Adding it here overrides the fixed positioning, which
+   drops the bar into the flow and makes the sidebar collide with it. */
+.breadcrumbs,
+.page__hero,
+.page__hero--overlay,
+.initial-content,
+#main,
+.page__footer {
+  position: relative;
+  z-index: 1;
+}
+
+/* --------------------------------------------------------------------------
+   The sidebar is `position: fixed`, so it contributes no height to the page
+   flow. On a short page the footer therefore rides up underneath it. The base
+   theme hides that collision behind an opaque footer; ours is transparent, so
+   the sidebar links and the footer text would overlap and show through each
+   other. Reserve enough height in the main column to keep the footer clear of
+   the sidebar content.
+
+   Raise this if the sidebar grows (a longer bio, more profile links).
+   -------------------------------------------------------------------------- */
+@media screen and (min-width: $sidebar-screen-min-width) {
+  #main {
+    min-height: 32em;
+  }
+}
+
+/* Readable panels over the painting. */
+.page__inner-wrap,
+.archive,
+.sidebar .author__content {
+  background-color: #{'rgb(255 255 255 / var(--bg-panel))'};
+  border-radius: $border-radius;
+}
+
+.page__inner-wrap,
+.archive {
+  padding: 1em 1.25em;
+}
+
+.sidebar .author__content {
+  padding: 0.75em 1em;
+}
+
+/* --------------------------------------------------------------------------
+   Masthead and footer are fully transparent, so the painting runs behind
+   them unbroken.
+
+   The base theme fills several nested elements inside the masthead with
+   --global-bg-color (an opaque white), which shows up as a white strip
+   behind the site title and the nav links even when .masthead itself is
+   transparent. They all have to be cleared, not just the bar.
+
+   The exception is .hidden-links: that is the pop-out overflow menu, which
+   needs an opaque backing of its own to stay readable over the painting.
+   -------------------------------------------------------------------------- */
+.masthead,
+.masthead__menu-item,
+.page__footer,
+.greedy-nav,
+.greedy-nav button {
+  background: transparent;
+}
+
+/* The base theme draws a hairline under the masthead; drop it too. */
+.masthead::after {
+  display: none;
+}
+
+
+/* --------------------------------------------------------------------------
+   Ink colour. The theme drives body copy from --global-text-color; headings,
+   the masthead and the sidebar are set explicitly because they use their own
+   colours in the base theme.
+   -------------------------------------------------------------------------- */
+:root {
+  --global-text-color: #{$bg-ink};
+  --global-link-color: #{$bg-link};
+  --global-link-color-hover: #{$bg-link-hover};
+  --global-link-color-visited: #{$bg-link};
+}
+
+/* Underlined so links stay identifiable over the painting, not by colour
+   alone (which also keeps them usable for colour-blind readers). */
+.page__content a,
+.archive__item-excerpt a {
+  color: $bg-link;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+
+  &:hover {
+    color: $bg-link-hover;
+  }
+}
+
+/* The "Follow" button: translucent, with the same ink as the body text.
+   The base .btn sets `color: #fff !important`, hence the !important here. */
+.btn--inverse {
+  background-color: rgba(255, 255, 255, 0.20);
+  color: $bg-ink !important;
+  border: 1px solid rgba(15, 5, 107, 0.30) !important;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.35);
+    color: $bg-ink !important;
+  }
+}
+
+.page__content,
+.page__content p,
+.page__content li,
+.page__title,
+.archive__item-title,
+.archive__item-excerpt,
+.author__name,
+.author__bio,
+.author__urls a,
+.page__footer,
+.page__footer a {
+  color: $bg-ink;
+}
+
+.page__content h1,
+.page__content h2,
+.page__content h3,
+.page__content h4,
+.page__content h5,
+.page__content h6 {
+  color: $bg-ink;
+}
+
+.masthead,
+.greedy-nav,
+.greedy-nav a,
+.greedy-nav .site-title {
+  color: $bg-ink;
+}
+
+.greedy-nav button {
+  background-color: transparent;
+}
+
+.greedy-nav .visible-links a::before {
+  background-color: $bg-ink;
+}
+
+/* --------------------------------------------------------------------------
+   No dark mode. Every colour on this site (the ink, the links, the wash over
+   the painting) was chosen against the light painting, and with transparent
+   content panels a darkened background leaves dark text on a dark image. The
+   site therefore renders the same in both colour schemes.
+
+   The base theme's own dark palette is scoped to html[data-theme="dark"],
+   which only the masthead toggle sets; the rules below pin the colours so
+   that toggle cannot produce an unreadable page either.
+   -------------------------------------------------------------------------- */
+html[data-theme="dark"] {
+  --global-text-color: #{$bg-ink};
+  --global-link-color: #{$bg-link};
+  --global-link-color-hover: #{$bg-link-hover};
+  --global-link-color-visited: #{$bg-link};
+  --global-masthead-link-color: #{$bg-ink};
+  --global-bg-color: transparent;
+}
+
+@media print {
+  body::before {
+    display: none;
+  }
+}

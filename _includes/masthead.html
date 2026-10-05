@@ -18,9 +18,13 @@
               <a href="{{ domain }}{{ link.url }}">{{ link.title }}</a>
             </li>
           {% endfor %}
-          <li id="theme-toggle" class="masthead__menu-item persist tail">
-            <a role="button" aria-labelledby="theme-icon"><i id="theme-icon" class="fa-solid fa-sun" aria-hidden="true" title="toggle theme"></i></a>
-          </li>
+          {% comment %}
+            The theme toggle has been removed: this site has no dark mode, and
+            the colours are pinned for html[data-theme="dark"] in
+            _sass/layout/_background.scss so the theme script cannot produce an
+            unreadable page. The greedy-nav plugin looks for a `.persist.tail`
+            item here but has a fallback branch when there is none.
+          {% endcomment %}
         </ul>
         <ul class="hidden-links hidden"></ul>
       </nav>

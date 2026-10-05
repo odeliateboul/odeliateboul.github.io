@@ -1,0 +1,94 @@
+/* ==========================================================================
+   RESEARCH ENTRIES
+   --------------------------------------------------------------------------
+   One block per piece of work. Each entry is wrapped in
+   <section class="research-entry" markdown="1"> so its float is contained;
+   without that, the next entry's heading would ride up alongside the
+   previous figure.
+
+   Two figure variants, both linking to the paper:
+
+     .research-figure--left  floats left at 50% of the column, text wrapping
+                             to its right and then below.
+     .research-figure--full  spans the full column with the text below it.
+
+   Both collapse to a full-width block below the $small breakpoint, so on a
+   phone the image always stacks above its text rather than being squeezed
+   into a narrow column.
+   ========================================================================== */
+
+.research-entry {
+  @include clearfix;
+  margin-bottom: 3em;
+
+  > h2:first-child {
+    clear: both;
+    margin-top: 0;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: $border-radius;
+  }
+
+  /* A list that straddles the bottom edge of a floated figure wraps part way
+     through, so the bullets after the figure sit at a different indent from
+     the ones beside it. `overflow: hidden` makes the list its own block
+     formatting context: it stays entirely beside the figure and every marker
+     lines up. */
+  ul,
+  ol {
+    overflow: hidden;
+  }
+}
+
+/* Floated at 50% of the column width. */
+.research-figure--left {
+  display: block;
+  margin: 0 auto 1em;
+
+  @include breakpoint($small) {
+    float: left;
+    width: 50%;
+    margin: 0 1.5em 1em 0;
+  }
+}
+
+/* Opt-in on a paragraph that should start below the floated figure instead
+   of wrapping around its bottom edge. */
+.research-clear {
+  clear: both;
+}
+
+/* Full column width, text below. */
+.research-figure--full {
+  display: block;
+  clear: both;
+  width: 100%;
+  margin: 0 0 1em;
+}
+
+/* ==========================================================================
+   FULL-WIDTH PAGES
+   --------------------------------------------------------------------------
+   The theme reserves the left-hand grid columns for the author sidebar even
+   on pages that do not render one, which leaves the content indented with an
+   empty gutter beside it. The layouts tag #main with .no-sidebar when
+   page.author_profile is false; reclaim that space here.
+   ========================================================================== */
+
+#main.no-sidebar {
+  .page,
+  .archive {
+    @include breakpoint($large) {
+      width: 100%;
+      float: none;
+      margin-left: 0;
+      margin-right: 0;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
