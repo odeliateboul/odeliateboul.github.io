@@ -26,6 +26,9 @@ $bg-wash  : 0.35;
 /* Ink colour for body text, headings and the masthead. */
 $bg-ink   : #0F056B;
 
+/* Fill colour for the masthead bar. */
+$bg-bar   : #e0f7fa;
+
 /* Link colour. The darkest blue that still reads as a different colour from
    $bg-ink while clearing 4.5:1 over the pale areas of the background
    painting. Links are also underlined, so they stay identifiable where the
@@ -114,18 +117,18 @@ body::before {
 }
 
 /* --------------------------------------------------------------------------
-   Masthead and footer are fully transparent, so the painting runs behind
-   them unbroken.
+   The masthead is an opaque bar; the footer stays transparent so the
+   painting runs behind it.
 
    The base theme fills several nested elements inside the masthead with
-   --global-bg-color (an opaque white), which shows up as a white strip
-   behind the site title and the nav links even when .masthead itself is
-   transparent. They all have to be cleared, not just the bar.
-
-   The exception is .hidden-links: that is the pop-out overflow menu, which
-   needs an opaque backing of its own to stay readable over the painting.
+   --global-bg-color (an opaque white), which would show as a white strip
+   behind the site title and the nav links. Those are cleared so they take
+   the bar's colour rather than painting their own on top of it.
    -------------------------------------------------------------------------- */
-.masthead,
+.masthead {
+  background: $bg-bar;
+}
+
 .masthead__menu-item,
 .page__footer,
 .greedy-nav,
@@ -133,7 +136,8 @@ body::before {
   background: transparent;
 }
 
-/* The base theme draws a hairline under the masthead; drop it too. */
+/* The base theme draws a hairline under the masthead; the solid fill
+   already separates it from the page. */
 .masthead::after {
   display: none;
 }
