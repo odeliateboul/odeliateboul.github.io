@@ -18,23 +18,23 @@ author_profile: false
    *Polarized optical emission reveals a tidal disruption event jet*, submitted.
 
 2. Konno, R., Ofek, E., Garrappa, S., **Teboul, O.**, Waxman, E., Ben-Ami, S., Kovaleva, D., Krassilchtchikov, A., Polishook, D., Segre, E., Zimmerman, E., 2026,
-   *Multi-scale variability in the optical afterglow of GRB251013C from high-cadence LAST observations*, A&A
+   *Multi-scale variability in the optical afterglow of GRB251013C from high-cadence LAST observations*, [A&A](https://arxiv.org/pdf/2609.25342)
 
 3. Shepherd, M., French, K., Stone, N., Earl, N., Melchor, D., Smith, T., Somalwar, J., **Teboul, O.**, Verrico, M.,
-   *The Delay Time Distribution of Tidal Disruption Events*, ApJ, 1005, 1 (2026)
+   *The Delay Time Distribution of Tidal Disruption Events*, [ApJ, 1005, 1 (2026)](https://iopscience.iop.org/article/10.3847/1538-4357/ae6b6f/pdf)
 
 4. **Teboul, O.**, & Perets, H.,
-   *Strong Scatterings Invalidate Proposed Models of Enhanced Tidal Disruption Event Rates in Post-starburst Galaxies*, ApJ, 984, 1 (2025)
+   *Strong Scatterings Invalidate Proposed Models of Enhanced Tidal Disruption Event Rates in Post-starburst Galaxies*, [ApJ, 984, 1 (2025)](https://iopscience.iop.org/article/10.3847/1538-4357/adc09f/pdf)
 
 5. **Teboul, O.**, Stone, N., Ostriker, J.,
-   *Loss Cone Shielding*, MNRAS, 527, 2 (2024)
+   *Loss Cone Shielding*, [MNRAS, 527, 2 (2024)](https://arxiv.org/pdf/2211.05858)
 
 6. **Teboul, O.**, & Metzger, B.,
-   *A Unified Theory of Jetted Tidal Disruption Events: From Promptly Escaping Relativistic to Delayed Transrelativistic Jets*, ApJL, 957, 1 (2023)
+   *A Unified Theory of Jetted Tidal Disruption Events: From Promptly Escaping Relativistic to Delayed Transrelativistic Jets*, [ApJL, 957, 1 (2023)](https://iopscience.iop.org/article/10.3847/2041-8213/ad0037/pdf)
    — chosen as a highlight article by AAS Nova
 
 7. **Teboul, O.**, & Shaviv, N.,
-   *Impact of the ISM magnetic field on GRB afterglow polarization*, MNRAS, 507, 4 (2021)
+   *Impact of the ISM magnetic field on GRB afterglow polarization*, [MNRAS, 507, 4 (2021)](https://arxiv.org/pdf/2008.10624)
 
 ## Conference Proceeding
 
