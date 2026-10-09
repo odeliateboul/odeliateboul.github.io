@@ -21,10 +21,10 @@ author_profile: false
    *Multi-scale variability in the optical afterglow of GRB251013C from high-cadence LAST observations*, A&A, [arXiv:2609.25342](https://arxiv.org/pdf/2609.25342)
 
 3. Shepherd, M., French, K., Stone, N., Earl, N., Melchor, D., Smith, T., Somalwar, J., **Teboul, O.**, Verrico, M.,
-   *The Delay Time Distribution of Tidal Disruption Events*, [ApJ, 1005, 1 (2026)](https://iopscience.iop.org/article/10.3847/1538-4357/ae6b6f/pdf)
+   *The Delay Time Distribution of Tidal Disruption Events*, [ApJ, 1005, 1 (2026)](https://ui.adsabs.harvard.edu/link_gateway/2026ApJ..1005...63S/EPRINT_PDF)
 
 4. **Teboul, O.**, & Perets, H.,
-   *Strong Scatterings Invalidate Proposed Models of Enhanced Tidal Disruption Event Rates in Post-starburst Galaxies*, [ApJ, 984, 1 (2025)](https://iopscience.iop.org/article/10.3847/1538-4357/adc09f/pdf)
+   *Strong Scatterings Invalidate Proposed Models of Enhanced Tidal Disruption Event Rates in Post-starburst Galaxies*, [ApJ, 984, 1 (2025)](https://ui.adsabs.harvard.edu/link_gateway/2025ApJ...984...12T/EPRINT_PDF)
 
 5. **Teboul, O.**, Stone, N., Ostriker, J.,
    *Loss Cone Shielding*, [MNRAS, 527, 2 (2024)](https://ui.adsabs.harvard.edu/link_gateway/2024MNRAS.527.3094T/EPRINT_PDF)
