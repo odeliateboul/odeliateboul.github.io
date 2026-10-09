@@ -21,20 +21,20 @@ author_profile: false
    *Multi-scale variability in the optical afterglow of GRB251013C from high-cadence LAST observations*, [arXiv:2609.25342](https://arxiv.org/pdf/2609.25342)
 
 3. Shepherd, M., French, K., Stone, N., Earl, N., Melchor, D., Smith, T., Somalwar, J., **Teboul, O.**, Verrico, M.,<br>
-   *The Delay Time Distribution of Tidal Disruption Events*, [ApJ, 1005, 1 (2026)](https://ui.adsabs.harvard.edu/link_gateway/2026ApJ..1005...63S/EPRINT_PDF)
+   *The Delay Time Distribution of Tidal Disruption Events*, [ApJ, 1005, 1 (2026)](https://ui.adsabs.harvard.edu/link_gateway/2026ApJ..1005...63S/PUB_PDF)
 
 4. **Teboul, O.**, & Perets, H.,<br>
-   *Strong Scatterings Invalidate Proposed Models of Enhanced Tidal Disruption Event Rates in Post-starburst Galaxies*, [ApJ, 984, 1 (2025)](https://ui.adsabs.harvard.edu/link_gateway/2025ApJ...984...12T/EPRINT_PDF)
+   *Strong Scatterings Invalidate Proposed Models of Enhanced Tidal Disruption Event Rates in Post-starburst Galaxies*, [ApJ, 984, 1 (2025)](https://ui.adsabs.harvard.edu/link_gateway/2025ApJ...984...12T/PUB_PDF)
 
 5. **Teboul, O.**, Stone, N., Ostriker, J.,<br>
-   *Loss Cone Shielding*, [MNRAS, 527, 2 (2024)](https://ui.adsabs.harvard.edu/link_gateway/2024MNRAS.527.3094T/EPRINT_PDF)
+   *Loss Cone Shielding*, [MNRAS, 527, 2 (2024)](https://ui.adsabs.harvard.edu/link_gateway/2024MNRAS.527.3094T/PUB_PDF)
 
 6. **Teboul, O.**, & Metzger, B.,<br>
-   *A Unified Theory of Jetted Tidal Disruption Events: From Promptly Escaping Relativistic to Delayed Transrelativistic Jets*, [ApJL, 957, 1 (2023)](https://ui.adsabs.harvard.edu/link_gateway/2023ApJ...957L...9T/EPRINT_PDF)
+   *A Unified Theory of Jetted Tidal Disruption Events: From Promptly Escaping Relativistic to Delayed Transrelativistic Jets*, [ApJL, 957, 1 (2023)](https://ui.adsabs.harvard.edu/link_gateway/2023ApJ...957L...9T/PUB_PDF)
    — chosen as a highlight article by AAS Nova
 
 7. **Teboul, O.**, & Shaviv, N.,<br>
-   *Impact of the ISM magnetic field on GRB afterglow polarization*, [MNRAS, 507, 4 (2021)](https://ui.adsabs.harvard.edu/link_gateway/2021MNRAS.507.5340T/EPRINT_PDF)
+   *Impact of the ISM magnetic field on GRB afterglow polarization*, [MNRAS, 507, 4 (2021)](https://ui.adsabs.harvard.edu/link_gateway/2021MNRAS.507.5340T/PUB_PDF)
 
 ## Conference Proceeding
 
