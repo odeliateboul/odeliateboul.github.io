@@ -15,7 +15,7 @@ author_profile: false
 {% endcomment %}
 
 1. Floris, A., Liodakis, I., Koljonen, I., Nilsson, K., Lindfors, E., **Teboul, O.**, Paggi, A., Blinov, D., Pursimo, T., 2026,
-   *Polarized optical emission reveals a tidal disruption event jet*, submitted.
+   *Polarized optical emission reveals a tidal disruption event jet*
 
 2. Konno, R., Ofek, E., Garrappa, S., **Teboul, O.**, Waxman, E., Ben-Ami, S., Kovaleva, D., Krassilchtchikov, A., Polishook, D., Segre, E., Zimmerman, E., 2026,
    *Multi-scale variability in the optical afterglow of GRB251013C from high-cadence LAST observations*, A&A, [arXiv:2609.25342](https://arxiv.org/pdf/2609.25342)
