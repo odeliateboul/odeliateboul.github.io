@@ -18,7 +18,7 @@ author_profile: false
    *Polarized optical emission reveals a tidal disruption event jet*
 
 2. Konno, R., Ofek, E., Garrappa, S., **Teboul, O.**, Waxman, E., Ben-Ami, S., Kovaleva, D., Krassilchtchikov, A., Polishook, D., Segre, E., Zimmerman, E., 2026,
-   *Multi-scale variability in the optical afterglow of GRB251013C from high-cadence LAST observations*, A&A, [arXiv:2609.25342](https://arxiv.org/pdf/2609.25342)
+   *Multi-scale variability in the optical afterglow of GRB251013C from high-cadence LAST observations*, [arXiv:2609.25342](https://arxiv.org/pdf/2609.25342)
 
 3. Shepherd, M., French, K., Stone, N., Earl, N., Melchor, D., Smith, T., Somalwar, J., **Teboul, O.**, Verrico, M.,
    *The Delay Time Distribution of Tidal Disruption Events*, [ApJ, 1005, 1 (2026)](https://ui.adsabs.harvard.edu/link_gateway/2026ApJ..1005...63S/EPRINT_PDF)
